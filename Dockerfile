@@ -1,11 +1,11 @@
-FROm php:7.2-apache
+FROM php:7.2-apache
 
 RUN apt-get update -yqq \
   && apt-get install -yqq --no-install-recommends \
     git \
     zip \
     unzip \
-  && rm -rf /var/lib/apt/lists
+  && rm -rf /var/lib/apt/lists \
 
 # PHP拡張を有効化
 RUN docker-php-ext-install pdo_mysql mysqli
@@ -18,6 +18,7 @@ COPY ./cake .
 WORKDIR ./ripple
 
 RUN a2enmod rewrite \
+    a2enmod headers \
   && service apache2 restart
 
 EXPOSE 80
