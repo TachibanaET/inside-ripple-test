@@ -13,9 +13,9 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => true,
-		'host' => '127.0.0.1',
+		'host' => 'db',
 		'login' => 'root',
-		'password' => '',
+		'password' => 'ripple_password',
 		'database' => 'ripple',
 		'prefix' => 'ib_',
 		'encoding' => 'utf8'
