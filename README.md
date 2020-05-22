@@ -21,5 +21,7 @@
 ## メモ
 
 rippleのURL: `localhost:8000/ripple`
+
 phpMyadminのURL: `localhost:8080/`
+
 データをimportする時phpMyadminを使うと便利かも
